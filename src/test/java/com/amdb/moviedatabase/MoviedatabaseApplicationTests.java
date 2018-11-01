@@ -1,4 +1,4 @@
-package com.AMDb.moviedatabase;
+package com.amdb.moviedatabase;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
