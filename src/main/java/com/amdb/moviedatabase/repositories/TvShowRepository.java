@@ -1,4 +1,4 @@
-package repositories;
+package com.amdb.moviedatabase.repositories;
 
 import org.springframework.data.repository.CrudRepository;
 
