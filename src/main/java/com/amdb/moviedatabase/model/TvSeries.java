@@ -22,25 +22,27 @@ public class TvSeries {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
 	private String title;
 	private String description;
 	private String creator;
 	private String airTime;
 	private String yearOfRun;
+	
 	@Lob
 	private Byte[] image;
 
 	@ElementCollection
 	@Enumerated(value = EnumType.STRING)
-	private Genre genre;
+	private Set<Genre> genre = new HashSet<>();
 
-	@OneToMany(mappedBy = "tvShow")
+	@OneToMany(mappedBy = "tvSeries")
 	private Set<Role> roles = new HashSet<>();
 
 	@ManyToMany
-    @JoinTable(name = "tv_show_star", joinColumns = @JoinColumn(name = "tv_show_id"),
-    inverseJoinColumns = @JoinColumn(name = "star_id"))
-    private Set<Star> stars = new HashSet<>();
+	@JoinTable(name = "tv_series_star", joinColumns = @JoinColumn(name = "tv_series_id"),
+	inverseJoinColumns = @JoinColumn(name = "star_id"))
+	private Set<Star> stars = new HashSet<>();
 
 	public Long getId() {
 		return id;
@@ -98,11 +100,11 @@ public class TvSeries {
 		this.image = image;
 	}
 
-	public Genre getGenre() {
+	public Set<Genre> getGenre() {
 		return genre;
 	}
 
-	public void setGenre(Genre genre) {
+	public void setGenre(Set<Genre> genre) {
 		this.genre = genre;
 	}
 

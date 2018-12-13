@@ -19,7 +19,7 @@ public class Role {
 	private Star star;
 
 	@ManyToOne
-	private TvSeries tvShow;
+	private TvSeries tvSeries;
 	
 	@ManyToOne
 	private Movie movie;
@@ -57,11 +57,11 @@ public class Role {
 	}
 
 	public TvSeries getTvShow() {
-		return tvShow;
+		return tvSeries;
 	}
 
-	public void setTvShow(TvSeries tvShow) {
-		this.tvShow = tvShow;
+	public void setTvShow(TvSeries tvSeries) {
+		this.tvSeries = tvSeries;
 	}
 
 	public Movie getMovie() {

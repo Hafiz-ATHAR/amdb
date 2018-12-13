@@ -33,7 +33,7 @@ public class Movie {
 	
 	@ElementCollection
 	@Enumerated(value = EnumType.STRING)
-	private Genre genre;
+	private Set<Genre> genre = new HashSet<>();
 
 	@OneToMany(mappedBy = "movie")
 	private Set<Role> roles = new HashSet<>();
@@ -107,12 +107,12 @@ public class Movie {
 	public void setImage(Byte[] image) {
 		this.image = image;
 	}
-
-	public Genre getGenre() {
+	
+	public Set<Genre> getGenre() {
 		return genre;
 	}
 
-	public void setGenre(Genre genre) {
+	public void setGenre(Set<Genre> genre) {
 		this.genre = genre;
 	}
 

@@ -3,7 +3,7 @@ INSERT INTO star (first_name, last_name) VALUES ('Grace', 'Gummer');
 INSERT INTO star (first_name, last_name) VALUES ('Jim', 'Cavizel');
 INSERT INTO star (first_name, last_name) VALUES ('Micheal', 'Emmerson');
 INSERT INTO star (first_name, last_name) VALUES ('James', 'Spader');
-INSERT INTO star (first_name, last_name) VALUES ('Megan', 'Boone');
+INSERT INTO star (first_name, last_name, born) VALUES ('Megan', 'Boone', TO_DATE('29/4/1983', 'DD/MM/YYYY'));
 INSERT INTO star (first_name, last_name) VALUES ('Ryan', 'Eggold');
 
 INSERT INTO tv_series (title, creator) VALUES ('Mr.Robot', 'Sam Esmail');
