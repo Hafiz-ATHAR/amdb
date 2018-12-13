@@ -26,7 +26,7 @@ public class Star {
 	private byte[] image;
 
 	@ManyToMany(mappedBy = "stars")
-	private Set<TvShow> tvShows  = new HashSet<>();
+	private Set<TvSeries> tvShows  = new HashSet<>();
 
 	@ManyToMany(mappedBy = "stars")
 	private Set<Movie> movies = new HashSet<>();
@@ -83,11 +83,11 @@ public class Star {
 		this.image = image;
 	}
 
-	public Set<TvShow> getTvShows() {
+	public Set<TvSeries> getTvShows() {
 		return tvShows;
 	}
 
-	public void setTvShows(Set<TvShow> tvShows) {
+	public void setTvShows(Set<TvSeries> tvShows) {
 		this.tvShows = tvShows;
 	}
 

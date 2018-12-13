@@ -24,7 +24,7 @@ public class Season {
 	@Lob
 	private Byte[] image;
 	@OneToMany
-	private Set<TvShow> tvShows = new HashSet<>();
+	private Set<TvSeries> tvShows = new HashSet<>();
 	
 	
 	public Byte[] getImage() {
@@ -57,10 +57,10 @@ public class Season {
 	public void setAirDate(LocalDate airDate) {
 		this.airDate = airDate;
 	}
-	public Set<TvShow> getTvShows() {
+	public Set<TvSeries> getTvShows() {
 		return tvShows;
 	}
-	public void setTvShows(Set<TvShow> tvShows) {
+	public void setTvShows(Set<TvSeries> tvShows) {
 		this.tvShows = tvShows;
 	}
 }

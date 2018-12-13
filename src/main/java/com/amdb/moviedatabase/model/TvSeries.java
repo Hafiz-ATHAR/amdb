@@ -17,7 +17,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
 @Entity
-public class TvShow {
+public class TvSeries {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
