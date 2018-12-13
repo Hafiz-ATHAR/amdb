@@ -20,7 +20,10 @@ public class Star {
 	private Long id;
 	private String firstName;
 	private String lastName;
+	
+	@Lob
 	private String description;
+	
 	private LocalDate born;
 	@Lob
 	private byte[] image;
